@@ -57,8 +57,8 @@ header img:hover {
 .menu-nav {
   margin-top: 25px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 per riga */
-  gap: 8px;                               /* meno spazio */
+  grid-template-columns: repeat(4, 1fr); /* 4 per riga */
+  gap: 6px;                               /* meno spazio */
   position: sticky;
   top: 10px;
   z-index: 100;
@@ -71,16 +71,16 @@ header img:hover {
 
 .menu-nav a {
   text-align: center;
-  padding: 6px 8px;            /* più piccolo */
+  padding: 6px 4px;            /* più piccolo */
   background: #ffffff;
-  border-radius: 40px;         /* ovale ma più compatto */
+  border-radius: 20px;         /* ovale ma più compatto */
   text-decoration: none;
   color: #b30000;
   font-weight: 600;
   font-size: 0.75rem;          /* testo più piccolo */
   border: 2px solid #b30000;
   transition: all 0.3s ease;
-  line-height: 1.1;            /* riduce altezza */
+  line-height: 1.2;            /* riduce altezza */
 }
 
 .menu-nav a:hover {
@@ -99,10 +99,9 @@ header img:hover {
 
   .menu-nav a {
     padding: 6px 6px;
-    font-size: 0.70rem;        /* ancora più piccolo su telefono */
+    font-size: 0.75rem;        /* ancora più piccolo su telefono */
   }
 }
-
 /* ============================
    MAIN & SEZIONI
 ============================ */
