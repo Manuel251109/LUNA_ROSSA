@@ -52,14 +52,14 @@ header img:hover {
 }
 
 /* ============================
-   NAV MENU – ULTRA COMPATTO
+   NAV MENU – ULTRA MINI
 ============================ */
 .menu-nav {
-  margin-top: 20px;
+  margin-top: 15px;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 per riga */
-  gap: 6px;                               /* pochissimo spazio */
-  padding: 6px 10px;
+  gap: 4px;                               /* spazio minimo */
+  padding: 4px 8px;
   background: transparent;
   max-width: 95%;
   margin-left: auto;
@@ -68,36 +68,36 @@ header img:hover {
 
 .menu-nav a {
   text-align: center;
-  padding: 4px 6px;            /* molto più piccolo */
+  padding: 3px 4px;            /* minuscolo */
   background: #ffffff;
-  border-radius: 35px;         /* ovale ma compatto */
+  border-radius: 25px;         /* ovale molto piccolo */
   text-decoration: none;
   color: #b30000;
   font-weight: 600;
-  font-size: 0.68rem;          /* testo piccolo */
-  border: 2px solid #b30000;
-  line-height: 1.05;           /* riduce altezza */
-  white-space: nowrap;         /* evita che vada a capo */
+  font-size: 0.55rem;          /* FONT SUPER PICCOLO */
+  border: 1px solid #b30000;   /* bordo più sottile */
+  line-height: 1;              /* altezza minima */
+  white-space: nowrap;         /* non va a capo */
   overflow: hidden;
 }
 
 .menu-nav a:hover {
   background: #b30000;
   color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(179, 0, 0, 0.3);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(179, 0, 0, 0.25);
 }
 
-/* MOBILE: 3 per riga anche su telefono */
+/* MOBILE: sempre 3 per riga */
 @media (max-width: 480px) {
   .menu-nav {
     grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
+    gap: 3px;
   }
 
   .menu-nav a {
-    padding: 4px 4px;
-    font-size: 0.63rem;        /* ancora più piccolo */
+    padding: 2px 3px;
+    font-size: 0.50rem;        /* ancora più piccolo su telefono */
   }
 }
 
