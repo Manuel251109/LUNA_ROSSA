@@ -54,15 +54,10 @@ header img:hover {
 /* ============================
    NAV MENU (STICKY & GLASS)
 ============================ */
-/* ============================
-   NAV MENU (STICKY & GLASS)
-============================ */
 .menu-nav {
   margin-top: 35px;
-  display: flex;
-  flex-wrap: nowrap;        /* <-- IMPORTANTE: niente wrap */
-  overflow-x: auto;         /* <-- scroll orizzontale */
-  overflow-y: hidden;       /* <-- niente scroll verticale */
+  display: grid;                     /* <-- GRIGLIA */
+  grid-template-columns: repeat(3, 1fr); /* <-- 3 per riga */
   gap: 10px;
   position: sticky;
   top: 15px;
@@ -70,33 +65,32 @@ header img:hover {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(10px);
   padding: 12px 20px;
-  border-radius: 50px;
+  border-radius: 20px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.12);
   max-width: 95%;
   margin-left: auto;
   margin-right: auto;
-
-  /* Scroll moderno */
-  scrollbar-width: none; /* Firefox */
-}
-
-.menu-nav::-webkit-scrollbar {
-  display: none; /* Chrome/Safari */
 }
 
 .menu-nav a {
-  flex: 0 0 auto;           /* <-- ogni voce resta in linea */
-  padding: 8px 16px;
+  text-align: center;
+  padding: 10px 12px;
   background: #ffffff;
-  border-radius: 20px;
+  border-radius: 15px;
   text-decoration: none;
   color: #b30000;
   font-weight: 600;
   font-size: 0.88rem;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   border: 1px solid rgba(179, 0, 0, 0.15);
+  transition: all 0.3s ease;
 }
 
+.menu-nav a:hover {
+  background: #b30000;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(179, 0, 0, 0.3);
+}
 
 /* ============================
    MAIN & SEZIONI
@@ -288,4 +282,9 @@ main > img:hover {
 .back-to-top:hover {
   background: #800000;
   transform: translateY(-3px);
+}
+@media (max-width: 480px) {
+  .menu-nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
