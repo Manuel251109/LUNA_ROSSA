@@ -54,11 +54,15 @@ header img:hover {
 /* ============================
    NAV MENU (STICKY & GLASS)
 ============================ */
+/* ============================
+   NAV MENU (STICKY & GLASS)
+============================ */
 .menu-nav {
   margin-top: 35px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;        /* <-- IMPORTANTE: niente wrap */
+  overflow-x: auto;         /* <-- scroll orizzontale */
+  overflow-y: hidden;       /* <-- niente scroll verticale */
   gap: 10px;
   position: sticky;
   top: 15px;
@@ -71,9 +75,17 @@ header img:hover {
   max-width: 95%;
   margin-left: auto;
   margin-right: auto;
+
+  /* Scroll moderno */
+  scrollbar-width: none; /* Firefox */
+}
+
+.menu-nav::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
 }
 
 .menu-nav a {
+  flex: 0 0 auto;           /* <-- ogni voce resta in linea */
   padding: 8px 16px;
   background: #ffffff;
   border-radius: 20px;
@@ -85,12 +97,6 @@ header img:hover {
   border: 1px solid rgba(179, 0, 0, 0.15);
 }
 
-.menu-nav a:hover {
-  background: #b30000;
-  color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(179, 0, 0, 0.3);
-}
 
 /* ============================
    MAIN & SEZIONI
