@@ -52,12 +52,12 @@ header img:hover {
 }
 
 /* ============================
-   NAV MENU – DIMENSIONE NORMALE
+   NAV MENU – TUTTE LEGGIBILI
 ============================ */
 .menu-nav {
   margin-top: 25px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 per riga */
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 colonne stabili */
   gap: 10px;
   padding: 10px 15px;
   background: transparent;
@@ -68,7 +68,7 @@ header img:hover {
 
 .menu-nav a {
   text-align: center;
-  padding: 4px 6px;            /* dimensione normale */
+  padding: 8px 10px;            /* dimensione normale */
   background: #ffffff;
   border-radius: 45px;          /* ovale elegante */
   text-decoration: none;
@@ -77,8 +77,9 @@ header img:hover {
   font-size: 0.80rem;           /* leggibile */
   border: 2px solid #b30000;
   line-height: 1.2;
-  white-space: nowrap;
+  white-space: nowrap;          /* NON va a capo */
   overflow: hidden;
+  text-overflow: ellipsis;      /* evita tagli brutti */
   transition: all 0.3s ease;
 }
 
@@ -92,7 +93,7 @@ header img:hover {
 /* MOBILE */
 @media (max-width: 480px) {
   .menu-nav {
-    grid-template-columns: repeat(3, 1fr); /* sempre 3 per riga */
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* sempre 3 per riga */
     gap: 8px;
   }
 
