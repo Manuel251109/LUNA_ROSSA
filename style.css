@@ -55,12 +55,11 @@ header img:hover {
    NAV MENU – VERSIONE DEFINITIVA
 ============================ */
 .menu-nav {
-  margin-top: 25px;
+  margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 per riga */
-  gap: 10px;
-  padding: 12px 15px;
-  background: transparent;
+  gap: 6px;                               /* meno spazio */
+  padding: 8px 10px;                      /* più compatto */
   max-width: 95%;
   margin-left: auto;
   margin-right: auto;
@@ -68,17 +67,17 @@ header img:hover {
 
 .menu-nav a {
   text-align: center;
-  padding: 6px 8px;
+  padding: 4px 5px;                       /* molto più piccolo */
   background: #ffffff;
-  border-radius: 45px;
+  border-radius: 35px;
   text-decoration: none;
   color: #b30000;
   font-weight: 700;
-  font-size: 0.78rem;     /* più piccolo ma leggibile */
+  font-size: 0.68rem;                     /* PERFETTO per telefono */
   border: 2px solid #b30000;
-  line-height: 1.2;
-  white-space: normal;    /* <-- IMPORTANTISSIMO: permette di andare a capo */
-  word-break: break-word; /* <-- evita tagli brutti */
+  line-height: 1.1;
+  white-space: normal;                    /* permette 2 righe */
+  word-break: break-word;                 /* evita tagli brutti */
   transition: all 0.3s ease;
 }
 
@@ -87,20 +86,6 @@ header img:hover {
   color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(179, 0, 0, 0.3);
-}
-
-/* MOBILE – PERFETTO SU TELEFONO */
-@media (max-width: 480px) {
-  .menu-nav {
-    grid-template-columns: repeat(3, 1fr); /* sempre 3 per riga */
-    gap: 8px;
-  }
-
-  .menu-nav a {
-    padding: 6px 6px;
-    font-size: 0.70rem;   /* leggermente più piccolo */
-  }
-}
 
 /* ============================
    MAIN & SEZIONI
