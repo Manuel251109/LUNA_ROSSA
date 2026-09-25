@@ -58,8 +58,8 @@ header img:hover {
   margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 per riga */
-  gap: 6px;                               /* meno spazio */
-  padding: 8px 10px;                      /* più compatto */
+  gap: 3px;                               /* meno spazio */
+  padding: 4px 5px;                      /* più compatto */
   max-width: 95%;
   margin-left: auto;
   margin-right: auto;
@@ -67,7 +67,7 @@ header img:hover {
 
 .menu-nav a {
   text-align: center;
-  padding: 4px 5px;                       /* molto più piccolo */
+  padding: 2px 5px;                       /* molto più piccolo */
   background: #ffffff;
   border-radius: 35px;
   text-decoration: none;
