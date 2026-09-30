@@ -73,7 +73,7 @@ header img:hover {
   text-decoration: none;
   color: #b30000;
   font-weight: 700;
-  font-size: 1.00rem;                     /* PERFETTO per telefono */
+  font-size: 0.85rem;                     /* PERFETTO per telefono */
   border: 2px solid #b30000;
   line-height: 1.1;
   white-space: normal;                    /* permette 2 righe */
